@@ -343,7 +343,7 @@ func EncodePath(pathName string) string {
 // We support '.' with bucket names but we fallback to using path
 // style requests instead for such buckets.
 var (
-	validBucketName       = regexp.MustCompile(`^[A-Za-z0-9][A-Za-z0-9\.\-\_\:]{1,61}[A-Za-z0-9]$`)
+	validBucketName       = regexp.MustCompile(`^[A-Za-z0-9\_][A-Za-z0-9\.\-\_\:]{1,61}[A-Za-z0-9\_]$`)
 	validBucketNameStrict = regexp.MustCompile(`^[a-z0-9][a-z0-9\.\-]{1,61}[a-z0-9]$`)
 	ipAddress             = regexp.MustCompile(`^(\d+\.){3}\d+$`)
 )
