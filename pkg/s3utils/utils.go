@@ -386,7 +386,7 @@ func CheckValidBucketName(bucketName string) (err error) {
 // This is a stricter version.
 // - http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html
 func CheckValidBucketNameStrict(bucketName string) (err error) {
-	return checkBucketNameCommon(bucketName, true)
+	return checkBucketNameCommon(bucketName, false)
 }
 
 // CheckValidObjectNamePrefix - checks if we have a valid input object name prefix.
